@@ -1,0 +1,146 @@
+a{
+    color: black;
+}
+.container{
+    margin: 15px auto;
+    width: 1200px;
+    min-height: 800px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.container .shopping-cart{
+    margin: 20px auto;
+}
+
+.container .shopping-cart table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+td{
+  padding:10px 30px;  
+}
+.container .shopping-cart table td:nth-child(2){
+     max-width: 600px;
+}
+.container .shopping-cart table td:nth-child(2) .imgP{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+}
+.container .shopping-cart table td .nameP{
+     padding:10px;
+}
+
+
+.container .shopping-cart table .amount div{
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 35px;
+    padding: 7px 0;
+    font-size: 18px;
+    border: 1px solid #ddd;
+}
+
+.container .shopping-cart table .amount div a{
+    color: black;
+    font-size: 18px;
+}
+
+.container .shopping-cart table .amount .quantity-input {
+    text-align: center;
+    display: inline-block;
+    height: 35px;
+    font-size: 18px;
+    width: 50px;
+/*  margin: 0 1px;*/
+    border: 1px solid #ddd;
+}
+
+.container .shopping-cart table .amount .quantity-btn:hover {
+  background-color: #ddd;
+}
+
+.container .shopping-cart table .amount .quantity-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+}
+
+.container .shopping-cart table .action{
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    background: linear-gradient(to top, rgb(255,212,0) ,#ffbc06);
+}
+
+input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+    vertical-align: middle;
+}
+input[type="checkbox"]:checked {
+    background: linear-gradient(to top, rgb(255,212,0) ,#ffbc06);
+    border: 1px solid black;
+}
+
+.container .total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.container .total .selectAll{
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+}
+.container .total .selectAll span{
+    margin: 5px 10px;
+}
+.container .total .payment{
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    background: linear-gradient(to top, rgb(255,212,0) ,#ffbc06);
+}
+
+.container .total .totalMoney{
+    margin: 5px 10px;
+}
+
+.status .process{
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.status .cancled{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.status .confirmed{
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}

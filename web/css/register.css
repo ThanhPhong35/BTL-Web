@@ -1,0 +1,103 @@
+/*Login Form*/
+
+.signup_form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(image/signupg_bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.signup_form .left img{
+    width: 650px;
+}
+
+.signup_form .right{
+    position: relative;
+    top: -50px;
+    left: -60px;
+    padding: 50px 80px;
+}
+
+.signup_form .right h1{
+    font-family: prevattscriptssk;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.signup_form .right .label{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label .error{
+    color: red;
+    font-style: italic;
+}
+
+.box{
+    border: 2px solid #ffa500;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+}
+
+.icon{
+    position: relative;
+    top: 9px;
+    left: 15px;
+    color: #887205;
+}
+
+.text-input{
+    position: relative;
+    left: 9%;
+    width: 295px;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    font-size: 15px;
+}
+
+::-webkit-input-placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+.signup_form .right .loging{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px 0;
+   color: rgb(83, 82, 82);
+}
+
+.signup_form .right .loging a {
+    color: rgb(83, 82, 82);
+    padding-left: 5px;
+}
+
+.signup_form .right .loging a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+
+.signup_form .right button{
+    width: 350px;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ffd400,#ffa500);
+}

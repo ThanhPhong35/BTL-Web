@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;600;700&display=swap');
+header{
+    width: 100vw;
+    height: 130px;
+    background: linear-gradient(to top, rgb(255,212,0) ,#ffbc06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header-main{
+    padding: 10px 180px;
+}
+.header-main a{
+    color: black;
+}
+.header-main .infor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.header-main .infor .sale{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 480px;
+}
+
+.header-main .infor .saler{
+    padding: 0 35px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+.header-main .infor .contact a{ 
+    padding: 0 2px;
+}
+
+.header-main .infor .contact .fa-facebook{
+    color: blue;
+} 
+
+.header-main .infor .notice-support{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-main .infor .infor-user{
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main .infor .infor-user .menu{
+    display: flex;
+}
+.header-main .infor .infor-user .menu .user{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-main .infor .infor-user .menu .user .dropdown{
+    min-width: 130px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 50px -12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.header-main .infor .infor-user .menu .user:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    top: 25px;
+    z-index: 2;
+}
+
+.header-main .infor .infor-user .menu .user .dropdown a{
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.header-main .infor .infor-user .logout{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid black;
+}
+.header-main .infor .login{
+    padding-right: 10px;
+}
+
+.header-main .infor .signup{
+    padding-left: 10px;
+    border-left: 1px solid black;
+
+}
+
+.header-main .form-search{
+    display: flex;
+    align-items: center;
+}
+
+.header-main .form-search .logo{
+    font-size: 30px;
+    color: black;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+.header-main .form-search .logo span{
+    color: rgb(3, 3, 145);
+    text-decoration: underline;
+}
+.header-main .form-search .search{
+    margin-left: 20px;
+    display: flex;
+    margin-top: 10px;
+}
+.header-main .form-search .search .search-input{
+    left: 35px;
+    height: 40px;
+    width: 700px;
+    padding: 4px 10px;
+    border:1px solid #6c14d0;
+}
+
+.header-main .form-search .search .search-button{
+    height: 40px;
+    width: 70px;
+    margin-left: -40px;
+    background-color: #ffbc06;
+}
+
+.header-main .form-search .search .search-button i{
+    font-size: 20px;
+    
+}
+
+.header-main .form-search .cart {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10px;
+    width: 250px;
+}
+.header-main .form-search .cart img{
+    width: 40px;
+    height: 40px;
+    margin-left: 90px;
+/*    object-fit: 90%;*/
+}
+.header-main .form-search .size{ 
+    width: 20px; 
+    height: 20px; 
+    margin-top: 10px;
+    margin-left: 50px;
+    border: 1px solid red; 
+    border-radius: 50%; 
+    background-color: red;
+    text-align: center; 
+    color: white; 
+}
+
+.header-main .nav {
+    width: 800px;
+    margin: auto;
+}
+.header-main .nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header-main .nav ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 2px;
+}
+
+

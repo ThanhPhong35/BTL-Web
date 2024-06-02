@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6em;
+	font-family: "Open Sans",sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color: black;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a{
+    
+}
+
+.admin-panel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background-color:#fff;
+}
+
+.sidebar {
+    width:15%;
+    height: 100%;   
+    background-color: #111;
+}
+.sidebar  p{
+    margin: 0;
+    padding: 20px;
+    font-size: 40px;
+    color: #feb70b;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.sidebar p span{
+    margin: 0;
+    text-decoration: underline;
+    font-weight: 500px;
+    color: #ffd400;
+}
+.sidebar a{
+  color: #bbb;
+}
+.sidebar li{
+  text-align:center;
+  padding: 15px 0;
+}
+
+.sidebar ul li {
+	position: relative;
+    text-align:center;
+    color:#B3B3B3
+}
+.sidebar i {
+  color:#B3B3B3;
+  font-size: 20px;
+  margin-right: 10px;
+  vertical-align: center;
+}
+
+.sidebar ul a {
+    color:#B3B3B3;
+    padding: 15px 0;
+	text-decoration: none;
+	box-sizing:border-box;
+	display: block;
+	text-transform: capitalize;
+}
+.sidebar li:hover a, li#active{
+	background-color: #313131;
+}
+.sidebar li:hover i, li#active i{
+	color: #17BCE8;
+}
+.sidebar li:focus {
+	color: #17BCE8;
+}
+.content{
+    
+    float: left;
+    width: 85%;
+}
+.content .ifomation{
+    /* position: sticky; */
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 50px;
+    border-bottom: 1px solid #bbb;
+}
+
+.content .ifomation i{
+    padding: 0 10px;
+}
+
+.content .main {
+	background-color: rgb(255,255,255);
+	position: relative;
+}
+
+/* Định dạng form và container */
+.main .search-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+/* Định dạng ô nhập liệu */
+.main .search-box {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgb(235, 235, 235);
+    padding-left: 10px;
+    padding-right: 40px; /* Thêm padding để giữ khoảng trống cho icon */
+    transition: width 0.3s, border-radius 0.3s, background 0.3s, box-shadow 0.3s;
+    position: relative;
+    width: 400px;
+}
+
+/*.main .search-container:hover .search-box {
+    color: white;
+    background: rgb(200, 200, 200);
+    box-shadow: 0 0 0 1px rgb(61, 71, 82);
+}
+
+.main .search-container .search-box:focus {
+    transition: width 0.3s cubic-bezier(0,1.22,.66,1.39), border-radius 0.3s, background 0.3s;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 400px;
+    border-radius: auto;
+    background: rgb(235, 235, 235);
+    color: black;
+}*/
+
+
+/* Định dạng nút submit */
+.main #search-submit {
+    position: absolute;
+    right: 10px; /* Điều chỉnh khoảng cách từ phía bên phải */
+    top: 50%; /* Đặt ở giữa theo chiều dọc */
+    transform: translateY(-50%); /* Dịch chuyển lên trên 50% chiều cao của chính nó */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Định dạng icon tìm kiếm */
+.main .search-icon {
+    color: red;
+    font-size: 18px;
+}
+
+/* Khi hover vào nút submit */
+.main #search-submit:hover .search-icon {
+    color: black;
+}
+
+.main .add{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    color: white;
+    vertical-align: middle;
+}
+
+.main .add i{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+/*Account mới nhất*/
+.main .newest{
+    display: inline-block;
+    float: right;
+    margin: 15px 20px;
+    boder-radius: 8px;
+}
+
+.main .newest span{
+    padding: 10px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.main .newest table{
+    border-collapse: collapse;
+    border: 1px solid #f9f9f9;
+    boder-radius: 8px;
+    background-color: #ffd400;
+}
+
+.main .newest td{
+    padding: 5px 15px;
+    border: 1px solid #f9f9f9;
+}
+
+.picture img{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 4px;
+}
+.main .newest td.status{
+    text-align: center;
+}
+.main .newest td a{
+    display: inline-block; 
+    font-weight: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .newest td a.active{
+    background-color: green;
+    color: white;
+}
+
+.main .newest td a.inactive{
+    background-color: red;
+    color: white;
+}
+
+/* --------------Css cho bảng result---------------*/
+.main .result {
+    width: 95%;
+    height: 550px;
+    margin:15px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    position: relative;
+}
+
+.result table {
+    position: absolute;
+    width: 100%;
+/*    height: 100%;*/
+    border-collapse: collapse;
+}
+
+/* Thiết lập kiểu cho tiêu đề cột */
+.result th {
+    background-color: #f27427 ;
+    color: white;
+    height: 50px;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.result .center
+{
+    text-align: center;
+}
+
+/* Thiết lập kiểu cho hàng chẵn */
+.result tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Thiết lập kiểu cho ô trong bảng */
+.result td, .result th {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.result td a
+{
+    display: inline-block; 
+    font-weight: 300px;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result td p.action{
+    display: inline-block; 
+    font-weight: 300px;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #c6c6c9;
+    color: white;
+}
+
+.result td .cusid{
+    cursor: pointer;
+}
+
+.result td a.active,
+.result td a.confirm{
+    background-color: green;
+    color: white;
+}
+
+.result td a.inactive,
+.result td a.cancle{
+    background-color: red;
+    color: white;
+}
+
+/* Thiết lập kiểu cho cột hình ảnh */
+.result td.picture img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 4px;
+}
+
+.result td.title{
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Thiết lập kiểu cho biểu tượng hành động */
+.result a i {
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+/* Thiết lập kiểu hover cho biểu tượng hành động */
+.result a:hover i {
+    background-color: red;
+    color: white;
+}
+
+
+.main .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+}
+
+.main .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.main .modal .header{
+    padding: 10px 30px;
+    font-size: 18px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+    background-color: #17BCE8;
+}
+.main .modal .form{
+    display: flex;
+    margin: 20px;
+}
+
+
+.main .modal .form img{
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    z-index: 2;
+    margin-right: 20px;
+}
+.main .modal .form .infor input[type="text"],
+.main .modal .form .infor input[type="email"] {
+    padding: 5px;
+    width: 300px;
+}
+
+
+.main .modal .form .infor input[type="submit"]{
+    padding: 10px 20px;
+    background-color: red;
+    margin-top: 20px;
+    float: right;
+    border-radius: 5px;
+}
+
+.main .modal .form .infor input[type="radio"]:last-child{
+    margin-left: 50px;
+}
+.main .modal .form .infor textarea{
+    width: 300px;
+    height: 200px;
+}
+.main .modal .form .infor td{
+    /* color: #fff; */
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    border-bottom: solid 1px  rgba(144, 140, 140, 0.775);
+}
+
+/*Edit form*/
+
+.main-edit{
+    background-color: #f3f3f3 ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-edit .edit{
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+.edit .header{
+    padding: 10px 30px;
+    font-size: 18px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+    background-color: #17BCE8;
+}
+.edit .form{
+    display: flex;
+    margin: 20px;
+}
+
+
+.edit .form .photo img{
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    margin-bottom: 20px;
+}
+.edit .form .infor input[type="text"],
+.edit .form .infor input[type="email"] {
+    padding: 5px;
+    width: 300px;
+}
+
+.edit .form .infor input[type="submit"]{
+    padding: 5px 20px;
+    margin-top: 10px;
+    background-color: red;
+    float: right;
+    font-weight: 300px;
+    color: white;
+    border-radius: 5px;
+}
+
+.edit .form .infor option{
+    padding: 10px;
+}
+
+.edit .form .infor input[type="radio"]:last-child{
+    margin-left: 50px;
+}
+.edit .form .infor textarea{
+    width: 300px;
+    height: 200px;
+}
+.edit .form .infor td{
+    /* color: #fff; */
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    border-bottom: solid 1px  rgba(144, 140, 140, 0.775);
+    
+}
+
+
+/*Css dashboard*/
+
+.main .counter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.main .counter .box{
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+.main .counter .box i{
+    margin-left: 10px;
+}
+.main .counter .box p{
+    font-size: 30px;
+    margin-top: 10px
+}
+
+.main .counter .view{
+    background-color: #91ff00;
+}
+
+.main .counter .account{
+    background-color: #ffe000;
+}
+
+.main .counter .product{
+    background-color: #e3b4e6;
+}
+
+.main .counter .order{
+    background-color: #fffc00;
+}
+
+.main .counter .revenue{
+    background-color: #00bbffab;
+}
+
+.main .order{
+    margin: 20px;
+}
+.main .order .title{
+    padding: 0 0 20px 30px;
+    font-size: 30px;
+}
+
+.main .order .order-content{
+    border-radius: 10px;
+    height: 350px;
+    border-bottom: 1px solid #ddd;
+    width: max-content;
+}
+.main .order table {
+    border-collapse: collapse;
+}
+
+
+
+/* Thiết lập kiểu cho hàng chẵn */
+.order tr:nth-child(even) {
+    background-color: #f9f9f9;
+
+}
+
+/* Thiết lập kiểu cho ô trong bảng */
+.order td, .order th {
+    padding: 15px;
+    text-align: center;
+    
+}
+
+.confirm{
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+.cancle{
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}

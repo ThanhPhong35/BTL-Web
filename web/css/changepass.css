@@ -1,0 +1,52 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error{
+    display: none;
+    color: red; 
+    background-color:greenyellow;
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 10px; 
+    text-align: center;
+}
+.changpass{
+    padding: 30px;
+    border: 1px solid #0f6fc5;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.changpass p{
+    text-align: center;
+    font-size: 30px;
+    color: #0f6fc5;
+}
+
+.changpass input[type = "text"],
+.changpass input[type = "password"]
+{
+    width: 300px;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.changpass input[type = "checkbox"]{
+    margin-top: 10px;
+}
+
+.changpass input[type = "submit"]
+{
+    padding: 8px 10px;
+    margin-top: 10px;
+    float: right;
+    background-color: #0f6fc5;
+    border-radius: 5px;
+    color: white;
+    font-weight: 300px;
+}
